@@ -9,3 +9,10 @@ tests
 .DS_Store
 gradio.sh
 data_example
+wty/
+# notebook
+*.ipynb
+#图片
+test_img/
+# shell脚本（如果是临时的）
+scripts/bash/
