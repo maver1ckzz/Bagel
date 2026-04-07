@@ -8,6 +8,8 @@ import wandb
 import yaml
 from copy import deepcopy
 from dataclasses import dataclass, field
+import shutil
+
 from time import time
 from typing import Optional
 
@@ -64,6 +66,38 @@ def qwen2_flop_coefficients(config) -> tuple[float, float]:
     attn_factor = 12.0 * head_dim * num_attention_heads * num_hidden_layers
     return dense_token_factor, attn_factor
 
+def cleanup_old_checkpoints(checkpoint_dir, max_save, logger=None):
+    if max_save is None or max_save <= 0:
+        return
+
+    if not os.path.exists(checkpoint_dir):
+        return
+
+    # 只保留纯数字命名的 step 目录，例如 0002000 / 0010000
+    ckpt_names = []
+    for name in os.listdir(checkpoint_dir):
+        path = os.path.join(checkpoint_dir, name)
+        if os.path.isdir(path) and name.isdigit():
+            ckpt_names.append(name)
+
+    # 按 step 从小到大排序，最小的是最旧的
+    ckpt_names = sorted(ckpt_names, key=lambda x: int(x))
+
+    # 超过上限就删最旧的
+    while len(ckpt_names) > max_save:
+        old_name = ckpt_names.pop(0)
+        old_path = os.path.join(checkpoint_dir, old_name)
+        try:
+            shutil.rmtree(old_path)
+            if logger is not None:
+                logger.info(f"Removed old checkpoint: {old_path}")
+            else:
+                print(f"Removed old checkpoint: {old_path}")
+        except Exception as e:
+            if logger is not None:
+                logger.error(f"Failed to remove old checkpoint {old_path}: {e}")
+            else:
+                print(f"Failed to remove old checkpoint {old_path}: {e}")
 
 def detect_peak_tflops(default_tflops: float) -> float:
     """Guess per-device BF16 TFLOPs from GPU name; fall back to default when unknown."""
@@ -289,6 +323,12 @@ class TrainingArguments:
         default=500_000,
         metadata={"help": "Total number of optimizer steps to train for."}
     )
+
+    max_save: int = field(
+        default=1,
+        metadata={"help": "Total checkpoint to save."}
+    )
+
 
     # --- optimization & scheduler ---
     warmup_steps: int = field(
@@ -738,6 +778,10 @@ def main():
             total_samples = torch.tensor(len(data['sample_lens']), device=device)
             dist.all_reduce(total_samples, op=dist.ReduceOp.SUM)
 
+            num_samples_local = len(data['sample_lens'])
+            sample_lens_local = data['sample_lens']
+            seq_len = data['sequence_length']
+
             # Measure training speed:
             torch.cuda.synchronize()
             end_time = time()
@@ -758,7 +802,20 @@ def main():
                 avg_loss = avg_loss.item() / dist.get_world_size()
                 message += f"Train Loss {key}: {avg_loss:.4f}, "
                 wandb_log[key] = avg_loss
-            message += f"Train Steps/Sec: {steps_per_sec:.2f}, Tokens/Sec: {tokens_per_sec/1000:.2f}k, MFU: {mfu_value*100:.1f}%, "
+            message += (
+                f"Train Steps/Sec: {steps_per_sec:.2f}, "
+                f"Tokens/Sec: {tokens_per_sec/1000:.2f}k, "
+                f"MFU: {mfu_value*100:.1f}%, "
+                f"Local Samples: {num_samples_local}, "
+                f"Global Samples: {total_samples.item()}, "
+                f"Seq Len: {seq_len}, "
+                f"Sample Lens: {sample_lens_local}, "
+            )
+            remaining_steps = training_args.total_steps - curr_step
+            eta_seconds = remaining_steps / max(steps_per_sec, 1e-8)
+            eta_hours = eta_seconds / 3600
+
+            message += f"ETA: {eta_hours:.2f}h, "
             logger.info(message)
             if dist.get_rank() == 0:
                 print(message, flush=True)
@@ -818,6 +875,14 @@ def main():
                 fsdp_config=fsdp_config,
                 data_status=gather_list
             )
+            if dist.get_rank() == 0:
+                cleanup_old_checkpoints(
+                    checkpoint_dir=training_args.checkpoint_dir,
+                    max_save=training_args.max_save,
+                    logger=logger
+                )
+
+            dist.barrier()
             # Clear CUDA cache and force garbage collection after checkpoint to free memory
             gc.collect()
             torch.cuda.empty_cache()
@@ -860,6 +925,14 @@ def main():
             fsdp_config=fsdp_config,
             data_status=gather_list
         )
+        if dist.get_rank() == 0:
+            cleanup_old_checkpoints(
+                checkpoint_dir=training_args.checkpoint_dir,
+                max_save=training_args.max_save,
+                logger=logger
+            )
+
+        dist.barrier()
         # Clear CUDA cache and force garbage collection after final checkpoint
         gc.collect()
         torch.cuda.empty_cache()

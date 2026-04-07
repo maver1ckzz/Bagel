@@ -16,9 +16,14 @@ DATASET_REGISTRY = {
 DATASET_INFO = {
     't2i_pretrain': {
         't2i': {
-            'data_dir': 'your_data_path/bagel_example/t2i', # path of the parquet files
-            'num_files': 10, # number of data units to be sharded across all ranks and workers
-            'num_total_samples': 1000, # number of total samples in the dataset
+            'data_dir': '/hdd/wangty/diffuser_workdir/bagel_example/t2i',
+            'num_files': 1,
+            'num_total_samples': 10,
+        },
+        't2i_full': {
+            'data_dir': '/hdd/wangty/diffuser_workdir/bagel_example/t2i_full',
+            'num_files': 1,
+            'num_total_samples': 1561,
         },
     },
     'unified_edit':{

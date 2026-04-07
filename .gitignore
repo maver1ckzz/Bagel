@@ -14,5 +14,6 @@ wty/
 *.ipynb
 #图片
 test_img/
+*.png
 # shell脚本（如果是临时的）
 scripts/bash/
