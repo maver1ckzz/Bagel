@@ -28,6 +28,14 @@ from modeling.bagel.qwen2_navit import (
 )
 from modeling.bagel.siglip_navit import SiglipEncoderLayer, SiglipVisionTransformer
 
+def cast_state_dict_to_bf16(state_dict):
+    out = {}
+    for k, v in state_dict.items():
+        if torch.is_tensor(v) and torch.is_floating_point(v):
+            out[k] = v.to(torch.bfloat16)
+        else:
+            out[k] = v
+    return out
 
 class FSDPConfig:
     def __init__(
@@ -108,6 +116,7 @@ class FSDPCheckpoint:
             ):
                 ema_state_dict = ema_model.state_dict()
                 if dist.get_rank() == 0:
+                    ema_state_dict = cast_state_dict_to_bf16(ema_state_dict)
                     save_file(ema_state_dict, os.path.join(save_path, "ema.safetensors"))
 
         with FSDP.state_dict_type(
@@ -117,6 +126,7 @@ class FSDPCheckpoint:
         ):
             model_state_dict = model.state_dict()
             if dist.get_rank() == 0:
+                model_state_dict = cast_state_dict_to_bf16(model_state_dict)
                 save_file(model_state_dict, os.path.join(save_path, "model.safetensors"))
 
         with FSDP.state_dict_type(model, StateDictType.LOCAL_STATE_DICT):
