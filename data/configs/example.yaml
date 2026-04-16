@@ -1,30 +1,30 @@
-t2i_pretrain:
-  dataset_names:
-  - t2i_full
-  image_transform_args:
-    image_stride: 16
-    max_image_size: 1024
-    min_image_size: 512
-  is_mandatory: true
-  num_used_data: # The sum should be larger that NUM_GPUS x NUM_WORKERS
-  - 10
-  weight: 1
-
-# unified_edit:
+# t2i_pretrain:
 #   dataset_names:
-#   - seedxedit_multi
+#   - t2i_full
 #   image_transform_args:
 #     image_stride: 16
 #     max_image_size: 1024
 #     min_image_size: 512
-#   vit_image_transform_args:
-#     image_stride: 14
-#     max_image_size: 518
-#     min_image_size: 224
-#   is_mandatory: false
-#   num_used_data:
-#   - 10
+#   is_mandatory: true
+#   num_used_data: # The sum should be larger that NUM_GPUS x NUM_WORKERS
+#   - 500
 #   weight: 1
+
+unified_edit:
+  dataset_names:
+  - sag_crop
+  image_transform_args:
+    image_stride: 16
+    max_image_size: 1024
+    min_image_size: 512
+  vit_image_transform_args:
+    image_stride: 14
+    max_image_size: 518
+    min_image_size: 224
+  is_mandatory: false
+  num_used_data:
+  - 14049
+  weight: 1
 
 # vlm_sft:
 #   dataset_names:

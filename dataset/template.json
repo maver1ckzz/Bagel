@@ -1,0 +1,28 @@
+{
+  "prefix": [
+    "An axial cervical spine MRI image at the {level} level.",
+    "Axial cervical spine MRI at {level}.",
+    "This is an axial MRI image of the cervical spine at the {level} level."
+  ],
+
+  "stenosis": {
+    "none": ["Spinal canal stenosis: none."],
+    "mild stenosis": ["Spinal canal stenosis: mild stenosis."],
+    "stenosis": ["Spinal canal stenosis: stenosis."]
+  },
+
+  "opll": {
+    "absent": ["OPLL: absent."],
+    "present": ["OPLL: present."]
+  },
+
+  "disc": {
+    "none": ["Disc protrusion: none."],
+    "present": ["Disc protrusion: present."]
+  },
+
+  "foraminal": {
+    "none": ["{side} foraminal stenosis: none."],
+    "present": ["{side} foraminal stenosis: present."]
+  }
+}

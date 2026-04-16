@@ -28,12 +28,19 @@ DATASET_INFO = {
     },
     'unified_edit':{
         'seedxedit_multi': {
-            'data_dir': 'your_data_path/bagel_example/editing/seedxedit_multi',
+            'data_dir': 'your_data_path/bagel_example/bashediting/seedxedit_multi',
             'num_files': 10,
             'num_total_samples': 1000,
             "parquet_info_path": 'your_data_path/bagel_example/editing/parquet_info/seedxedit_multi_nas.json', # information of the parquet files
 		},
+        'sag_crop': {
+            'data_dir': '/hdd/wangty/diffuser_workdir/bagel_example/editing/sag_crop_64',
+            'num_files': 5,
+            'num_total_samples': 14049,
+            "parquet_info_path": '/hdd/wangty/diffuser_workdir/bagel_example/editing/parquet_info/sag_crop_64_nas.json', # information of the parquet files
+		},
     },
+
     'vlm_sft': {
         'llava_ov': {
 			'data_dir': 'your_data_path/bagel_example/vlm/images',
