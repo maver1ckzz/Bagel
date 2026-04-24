@@ -15,11 +15,13 @@ from typing import Optional
 
 import torch
 import torch.distributed as dist
+from PIL import Image
 from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
     CheckpointImpl,
     apply_activation_checkpointing,
     checkpoint_wrapper,
 )
+from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
 from torch.utils.data import DataLoader
 from transformers import HfArgumentParser, set_seed
 from transformers.optimization import (
@@ -29,6 +31,8 @@ from transformers.optimization import (
 
 from data.dataset_base import DataConfig, PackedDataset, collate_wrapper
 from data.data_utils import add_special_tokens
+from data.transforms import ImageTransform
+from inferencer import InterleaveInferencer
 from modeling.autoencoder import load_ae
 from modeling.bagel import (
     BagelConfig, Bagel, Qwen2Config, Qwen2ForCausalLM, SiglipVisionConfig, SiglipVisionModel
@@ -98,6 +102,89 @@ def cleanup_old_checkpoints(checkpoint_dir, max_save, logger=None):
                 logger.error(f"Failed to remove old checkpoint {old_path}: {e}")
             else:
                 print(f"Failed to remove old checkpoint {old_path}: {e}")
+
+
+def build_eval_transforms(dataset_meta):
+    image_transform_args = None
+    vit_image_transform_args = None
+    for dataset_args in dataset_meta.values():
+        if image_transform_args is None and "image_transform_args" in dataset_args:
+            image_transform_args = deepcopy(dataset_args["image_transform_args"])
+        if vit_image_transform_args is None and "vit_image_transform_args" in dataset_args:
+            vit_image_transform_args = deepcopy(dataset_args["vit_image_transform_args"])
+    if image_transform_args is None:
+        image_transform_args = dict(image_stride=16, max_image_size=1024, min_image_size=512)
+    if vit_image_transform_args is None:
+        vit_image_transform_args = dict(image_stride=14, max_image_size=518, min_image_size=224)
+    return ImageTransform(**image_transform_args), ImageTransform(**vit_image_transform_args)
+
+
+@torch.no_grad()
+def run_eval_sample(
+    step,
+    fsdp_model,
+    vae_model,
+    tokenizer,
+    new_token_ids,
+    vae_transform,
+    vit_transform,
+    training_args,
+    logger,
+):
+    if training_args.eval_every <= 0:
+        return
+    if not training_args.eval_image_path or not training_args.eval_prompt:
+        if dist.get_rank() == 0:
+            logger.warning("eval_every is enabled but eval_image_path/eval_prompt is empty; skipping eval sample.")
+        return
+
+    dist.barrier()
+    was_training = fsdp_model.training
+    fsdp_model.eval()
+    vae_model.eval()
+    try:
+        with FSDP.summon_full_params(fsdp_model, writeback=False, recurse=True):
+            if dist.get_rank() == 0:
+                output_dir = os.path.join(training_args.results_dir, "eval_samples")
+                os.makedirs(output_dir, exist_ok=True)
+                image = Image.open(training_args.eval_image_path).convert("RGB")
+                inferencer = InterleaveInferencer(
+                    fsdp_model.module,
+                    vae_model,
+                    tokenizer,
+                    vae_transform,
+                    vit_transform,
+                    new_token_ids,
+                )
+                output = inferencer(
+                    image=image,
+                    text=training_args.eval_prompt,
+                    think=False,
+                    understanding_output=False,
+                    cfg_text_scale=training_args.eval_cfg_text_scale,
+                    cfg_img_scale=training_args.eval_cfg_img_scale,
+                    cfg_interval=[
+                        training_args.eval_cfg_interval_start,
+                        training_args.eval_cfg_interval_end,
+                    ],
+                    cfg_renorm_min=training_args.eval_cfg_renorm_min,
+                    cfg_renorm_type=training_args.eval_cfg_renorm_type,
+                    num_timesteps=training_args.eval_num_timesteps,
+                    timestep_shift=training_args.eval_timestep_shift,
+                )
+                if output["image"] is None:
+                    logger.warning(f"Eval sample at step {step} produced no image.")
+                else:
+                    output_path = os.path.join(output_dir, f"step_{step:07d}.png")
+                    output["image"].save(output_path)
+                    logger.info(f"Saved eval sample to {output_path}")
+    except Exception as e:
+        if dist.get_rank() == 0:
+            logger.error(f"Failed to run eval sample at step {step}: {e}")
+    finally:
+        if was_training:
+            fsdp_model.train()
+        dist.barrier()
 
 def detect_peak_tflops(default_tflops: float) -> float:
     """Guess per-device BF16 TFLOPs from GPU name; fall back to default when unknown."""
@@ -327,6 +414,50 @@ class TrainingArguments:
     max_save: int = field(
         default=1,
         metadata={"help": "Total checkpoint to save."}
+    )
+    eval_every: int = field(
+        default=0,
+        metadata={"help": "Generate and save one edit sample every N steps; 0 disables this hook."}
+    )
+    eval_image_path: str = field(
+        default="",
+        metadata={"help": "Input image path used by the periodic edit sample hook."}
+    )
+    eval_prompt: str = field(
+        default="",
+        metadata={"help": "Text instruction used by the periodic edit sample hook."}
+    )
+    eval_num_timesteps: int = field(
+        default=20,
+        metadata={"help": "Diffusion steps for periodic edit samples."}
+    )
+    eval_cfg_text_scale: float = field(
+        default=4.0,
+        metadata={"help": "Text CFG scale for periodic edit samples."}
+    )
+    eval_cfg_img_scale: float = field(
+        default=2.0,
+        metadata={"help": "Image CFG scale for periodic edit samples."}
+    )
+    eval_cfg_interval_start: float = field(
+        default=0.0,
+        metadata={"help": "CFG interval start for periodic edit samples."}
+    )
+    eval_cfg_interval_end: float = field(
+        default=1.0,
+        metadata={"help": "CFG interval end for periodic edit samples."}
+    )
+    eval_cfg_renorm_min: float = field(
+        default=0.0,
+        metadata={"help": "CFG renorm minimum for periodic edit samples."}
+    )
+    eval_cfg_renorm_type: str = field(
+        default="global",
+        metadata={"help": "CFG renorm type for periodic edit samples."}
+    )
+    eval_timestep_shift: float = field(
+        default=3.0,
+        metadata={"help": "Timestep shift for periodic edit samples."}
     )
 
 
@@ -651,6 +782,7 @@ def main():
     # Setup packed dataloader
     with open(data_args.dataset_config_file, "r") as stream:
         dataset_meta = yaml.safe_load(stream)
+    eval_vae_transform, eval_vit_transform = build_eval_transforms(dataset_meta)
     dataset_config = DataConfig(grouped_datasets=dataset_meta)
     if training_args.visual_und:
         dataset_config.vit_patch_size = model_args.vit_patch_size
@@ -772,6 +904,18 @@ def main():
             scheduler.step()
             fsdp_ema_update(ema_model, fsdp_model, decay=training_args.ema)
             optimizer.zero_grad()
+            if curr_step > 0 and training_args.eval_every > 0 and curr_step % training_args.eval_every == 0:
+                run_eval_sample(
+                    curr_step,
+                    ema_model,
+                    vae_model,
+                    tokenizer,
+                    new_token_ids,
+                    eval_vae_transform,
+                    eval_vit_transform,
+                    training_args,
+                    logger,
+                )
         
         # Log loss values:
         if curr_step % training_args.log_every == 0:

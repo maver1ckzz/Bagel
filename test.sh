@@ -1,0 +1,13 @@
+python infer_legacy_two_phase_batch.py \
+  --input-json dataset.json \
+  --output-dir /hdd/wangty/diffuser_workdir/bagel/result/test \
+  --model-path /hdd/wangty/model/BAGEL-7B-MoT \
+  --checkpoint-path /hdd/wangty/diffuser_workdir/bagel/workdir/multi/model.safetensors \
+  --gpus 1 \
+  --batch-size 32 \
+  --cfg-text-scale 4.0 \
+  --cfg-img-scale 2.0 \
+  --num-timesteps 50 \
+  --max-text-token-n 256 \
+  --skip-existing-images \
+  # --skip-stage1

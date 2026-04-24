@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 from copy import deepcopy
-from typing import List, Dict, Optional, Union, Any, Tuple
+from typing import List, Dict, Optional, Union, Any
 
 from PIL import Image
 import torch
@@ -285,85 +285,10 @@ class InterleaveInferencer:
 
         return output_list
     
-    def interleaved_generate_image_first(
-        self,
-        input_image: Image.Image,
-        input_text: str,
-        do_sample: bool = False,
-        text_temperature: float = 0.3,
-        max_think_token_n: int = 1000,
-        cfg_text_scale: float = 3.0,
-        cfg_img_scale: float = 1.5,
-        cfg_interval: Tuple[float, float] = (0.4, 1.0),
-        timestep_shift: float = 3.0,
-        num_timesteps: int = 50,
-        cfg_renorm_min: float = 0.0,
-        cfg_renorm_type: str = "global",
-        enable_taylorseer: bool = False,
-    ) -> List[Union[str, Image.Image]]:
-        """
-        固定流程：先基于输入图像和单段文本提示生成图像，然后将生成的图像注入回序列，继续生成文本。
-
-        流程：input_image + input_text -> gen_image -> inject_image -> gen_text
-
-        这里的 input_text 应该已经由调用方拼好完整提示，例如包含第一阶段的
-        reasoning / focus 文本；该函数不再自动补 think prompt。
-
-        Returns:
-            [generated_image, generated_text]
-        """
-        output_list = []
-        gen_context = self.init_gen_context()
-        cfg_text_context = deepcopy(gen_context)
-        cfg_img_context = deepcopy(gen_context)
-
-        with torch.autocast(device_type="cuda", enabled=True, dtype=torch.bfloat16):
-            # Step 1: 把输入图像注入主 context；text CFG 保留这份 image-only 上下文
-            input_image_resized = self.vae_transform.resize_transform(pil_img2rgb(input_image))
-            gen_context = self.update_context_image(input_image_resized, gen_context, vae=True, vit=True)
-            image_shapes = input_image_resized.size[::-1]  # (H, W)
-            cfg_text_context = deepcopy(gen_context)
-
-            # Step 2: 主 context 注入文本；img CFG 只保留 text-only 上下文
-            gen_context = self.update_context_text(input_text, gen_context)
-            cfg_img_context = self.update_context_text(input_text, cfg_img_context)
-
-            # Step 3: 生成图像（基于输入图像 + 文本作为条件）
-            generated_image = self.gen_image(
-                image_shapes,
-                gen_context,
-                cfg_text_precontext=cfg_text_context,
-                cfg_img_precontext=cfg_img_context,
-                cfg_text_scale=cfg_text_scale,
-                cfg_img_scale=cfg_img_scale,
-                cfg_interval=cfg_interval,
-                timestep_shift=timestep_shift,
-                num_timesteps=num_timesteps,
-                cfg_renorm_min=cfg_renorm_min,
-                cfg_renorm_type=cfg_renorm_type,
-                enable_taylorseer=enable_taylorseer,
-            )
-            output_list.append(generated_image)
-
-            # Step 4: 把生成的图像重新注入 context（让模型看到自己生成的图像）
-            gen_context = self.update_context_image(generated_image, gen_context, vae=True, vit=True)
-
-            # Step 5: 继续生成文本（基于原始输入 + 自己生成的图像）
-            generated_text = self.gen_text(
-                gen_context,
-                do_sample=do_sample,
-                temperature=text_temperature,
-                max_length=max_think_token_n,
-            )
-            output_list.append(generated_text)
-
-        return output_list
-
     def __call__(
         self, 
         image: Optional[Image.Image] = None, 
         text: Optional[str] = None, 
-        image_first: bool = False,
         **kargs
     ) -> Dict[str, Any]:
         output_dict = {'image': None, 'text': None}
@@ -372,17 +297,13 @@ class InterleaveInferencer:
             print('Please provide at least one input: either an image or text.')
             return output_dict
 
-        if image_first:
-            if image is None or text is None:
-                raise ValueError("image_first=True requires both image and text.")
-            output_list = self.interleaved_generate_image_first(image, text, **kargs)
-        else:
-            input_list = []
-            if image is not None:
-                input_list.append(image)
-            if text is not None:
-                input_list.append(text)
-            output_list = self.interleave_inference(input_list, **kargs)
+        input_list = []
+        if image is not None:
+            input_list.append(image)
+        if text is not None:
+            input_list.append(text)
+
+        output_list = self.interleave_inference(input_list, **kargs)
 
         for i in output_list:
             if isinstance(i, Image.Image):

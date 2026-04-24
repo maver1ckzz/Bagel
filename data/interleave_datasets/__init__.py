@@ -2,4 +2,5 @@
 # SPDX-License-Identifier: Apache-2.0
 
 from .edit_dataset import UnifiedEditIterableDataset
+from .unified_edit_dataset_v2 import UnifiedEditIterableDatasetV2
 
