@@ -18,7 +18,13 @@ from data.data_utils import (
     patchify, 
 )
 from .qwen2_navit import NaiveCache
-from .modeling_utils import MLPconnector, TimestepEmbedder, PositionEmbedding
+from .modeling_utils import (
+    MLPconnector,
+    PositionEmbedding,
+    TimestepEmbedder,
+    mark_only_lora_trainable,
+    replace_linear_with_lora,
+)
 from modeling.cache_utils.taylorseer import cache_init
 
 from tqdm import tqdm
@@ -97,6 +103,66 @@ class Bagel(PreTrainedModel):
         if self.config.visual_gen:
             nn.init.constant_(self.llm2vae.weight, 0)
             nn.init.constant_(self.llm2vae.bias, 0)
+
+    def enable_lora(
+        self,
+        r: int,
+        alpha: float,
+        dropout: float,
+        apply_to_vit: bool = True,
+        apply_to_gen: bool = True,
+        apply_to_llm: bool = True,
+    ):
+        replaced = []
+        skip_names = ()
+        if apply_to_llm:
+            replaced.extend(
+                replace_linear_with_lora(
+                    self.language_model,
+                    r=r,
+                    alpha=alpha,
+                    dropout=dropout,
+                    module_name="language_model",
+                    skip_names=skip_names,
+                )
+            )
+        if apply_to_vit and self.config.visual_und:
+            replaced.extend(
+                replace_linear_with_lora(
+                    self.vit_model,
+                    r=r,
+                    alpha=alpha,
+                    dropout=dropout,
+                    module_name="vit_model",
+                    skip_names=skip_names,
+                )
+            )
+            replaced.extend(
+                replace_linear_with_lora(
+                    self.connector,
+                    r=r,
+                    alpha=alpha,
+                    dropout=dropout,
+                    module_name="connector",
+                    skip_names=skip_names,
+                )
+            )
+        if apply_to_gen and self.config.visual_gen:
+            for name in ("vae2llm", "llm2vae", "time_embedder"):
+                submodule = getattr(self, name, None)
+                if submodule is not None:
+                    replaced.extend(
+                        replace_linear_with_lora(
+                            submodule,
+                            r=r,
+                            alpha=alpha,
+                            dropout=dropout,
+                            module_name=name,
+                            skip_names=skip_names,
+                        )
+                    )
+        mark_only_lora_trainable(self)
+        return replaced
 
     def forward(
         self,

@@ -9,5 +9,5 @@ python infer_legacy_two_phase_batch.py \
   --cfg-img-scale 2.0 \
   --num-timesteps 50 \
   --max-text-token-n 256 \
-  --skip-existing-images \
-  # --skip-stage1
+  --skip-stage1 \
+    # --skip-existing-images \

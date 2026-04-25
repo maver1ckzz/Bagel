@@ -13,6 +13,7 @@ import math
 
 import numpy as np
 import torch
+import torch.nn.functional as F
 from torch import nn
 from transformers.activations import ACT2FN
 
@@ -122,6 +123,82 @@ class MLPconnector(nn.Module):
         hidden_states = self.activation_fn(hidden_states)
         hidden_states = self.fc2(hidden_states)
         return hidden_states
+
+
+class LoRALinear(nn.Module):
+    def __init__(self, linear: nn.Linear, r: int, alpha: float, dropout: float):
+        super().__init__()
+        if r <= 0:
+            raise ValueError("LoRA rank r must be > 0")
+        self.in_features = linear.in_features
+        self.out_features = linear.out_features
+        self.r = r
+        self.alpha = alpha
+        self.scaling = alpha / r
+        self.dropout = nn.Dropout(dropout) if dropout > 0 else nn.Identity()
+
+        self.weight = nn.Parameter(linear.weight.detach().clone(), requires_grad=False)
+        if linear.bias is not None:
+            self.bias = nn.Parameter(linear.bias.detach().clone(), requires_grad=False)
+        else:
+            self.register_parameter("bias", None)
+
+        self.lora_A = nn.Parameter(torch.empty(r, self.in_features))
+        self.lora_B = nn.Parameter(torch.zeros(self.out_features, r))
+        self.reset_parameters()
+
+    def reset_parameters(self):
+        nn.init.kaiming_uniform_(self.lora_A, a=math.sqrt(5))
+        nn.init.zeros_(self.lora_B)
+
+    @property
+    def merged_weight(self):
+        return self.weight + (self.lora_B @ self.lora_A) * self.scaling
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        base = F.linear(x, self.weight, self.bias)
+        lora_input = self.dropout(x).to(self.lora_A.dtype)
+        lora = F.linear(F.linear(lora_input, self.lora_A), self.lora_B) * self.scaling
+        return base + lora.to(base.dtype)
+
+
+def replace_linear_with_lora(
+    module: nn.Module,
+    r: int,
+    alpha: float,
+    dropout: float,
+    module_name: str = "",
+    skip_names: tuple[str, ...] = (),
+):
+    replaced = []
+    for child_name, child in list(module.named_children()):
+        full_name = f"{module_name}.{child_name}" if module_name else child_name
+        if isinstance(child, LoRALinear):
+            continue
+        if isinstance(child, nn.Linear) and not any(full_name.endswith(name) for name in skip_names):
+            setattr(module, child_name, LoRALinear(child, r=r, alpha=alpha, dropout=dropout))
+            replaced.append(full_name)
+            continue
+        replaced.extend(
+            replace_linear_with_lora(
+                child,
+                r=r,
+                alpha=alpha,
+                dropout=dropout,
+                module_name=full_name,
+                skip_names=skip_names,
+            )
+        )
+    return replaced
+
+
+def mark_only_lora_trainable(module: nn.Module):
+    for param in module.parameters():
+        param.requires_grad = False
+    for submodule in module.modules():
+        if isinstance(submodule, LoRALinear):
+            submodule.lora_A.requires_grad = True
+            submodule.lora_B.requires_grad = True
 
 
 class PositionEmbedding(nn.Module):

@@ -37,6 +37,14 @@ def cast_state_dict_to_bf16(state_dict):
             out[k] = v
     return out
 
+
+def extract_lora_state_dict(state_dict):
+    return {
+        k: v
+        for k, v in state_dict.items()
+        if ".lora_A" in k or ".lora_B" in k
+    }
+
 class FSDPConfig:
     def __init__(
         self,
@@ -45,12 +53,14 @@ class FSDPConfig:
         cpu_offload, 
         num_replicate,
         num_shard=8,
+        use_orig_params=False,
     ):
         self.sharding_strategy = sharding_strategy
         self.backward_prefetch = backward_prefetch
         self.cpu_offload = cpu_offload
         self.num_replicate = num_replicate
         self.num_shard = num_shard
+        self.use_orig_params = use_orig_params
 
 
 def fsdp_wrapper(original_model, fsdp_config, ignored_modules=[]):
@@ -88,6 +98,7 @@ def fsdp_wrapper(original_model, fsdp_config, ignored_modules=[]):
         backward_prefetch=BackwardPrefetch[fsdp_config.backward_prefetch],
         cpu_offload=CPUOffload(offload_params=fsdp_config.cpu_offload),
         device_mesh=device_mesh,
+        use_orig_params=fsdp_config.use_orig_params,
     )
 
 
@@ -103,6 +114,8 @@ class FSDPCheckpoint:
         data_status,
         logger, 
         fsdp_config,
+        lora_only=False,
+        save_training_state=True,
     ):
         save_path = os.path.join(ckpt_dir, f"{train_steps:07d}")
         os.makedirs(save_path, exist_ok=True)
@@ -116,8 +129,13 @@ class FSDPCheckpoint:
             ):
                 ema_state_dict = ema_model.state_dict()
                 if dist.get_rank() == 0:
-                    ema_state_dict = cast_state_dict_to_bf16(ema_state_dict)
-                    save_file(ema_state_dict, os.path.join(save_path, "ema.safetensors"))
+                    if lora_only:
+                        ema_state_dict = extract_lora_state_dict(ema_state_dict)
+                        save_name = "ema_lora.safetensors"
+                    else:
+                        ema_state_dict = cast_state_dict_to_bf16(ema_state_dict)
+                        save_name = "ema.safetensors"
+                    save_file(ema_state_dict, os.path.join(save_path, save_name))
 
         with FSDP.state_dict_type(
             model,
@@ -126,66 +144,83 @@ class FSDPCheckpoint:
         ):
             model_state_dict = model.state_dict()
             if dist.get_rank() == 0:
-                model_state_dict = cast_state_dict_to_bf16(model_state_dict)
-                save_file(model_state_dict, os.path.join(save_path, "model.safetensors"))
+                if lora_only:
+                    model_state_dict = extract_lora_state_dict(model_state_dict)
+                    save_name = "lora.safetensors"
+                else:
+                    model_state_dict = cast_state_dict_to_bf16(model_state_dict)
+                    save_name = "model.safetensors"
+                save_file(model_state_dict, os.path.join(save_path, save_name))
 
-        with FSDP.state_dict_type(model, StateDictType.LOCAL_STATE_DICT):
-            if fsdp_config.sharding_strategy == "FULL_SHARD":
-                shard_index = dist.get_rank()
-                total_shards = dist.get_world_size()
-            elif fsdp_config.sharding_strategy == "HYBRID_SHARD":
-                shard_index = dist.get_rank() % fsdp_config.num_shard
-                total_shards = fsdp_config.num_shard
-            else:
-                raise NotImplementedError
+        if save_training_state:
+            with FSDP.state_dict_type(model, StateDictType.LOCAL_STATE_DICT):
+                if fsdp_config.sharding_strategy == "FULL_SHARD":
+                    shard_index = dist.get_rank()
+                    total_shards = dist.get_world_size()
+                elif fsdp_config.sharding_strategy == "HYBRID_SHARD":
+                    shard_index = dist.get_rank() % fsdp_config.num_shard
+                    total_shards = fsdp_config.num_shard
+                else:
+                    raise NotImplementedError
 
-            optimizer_save_path = os.path.join(
-                save_path, f"optimizer.{shard_index:05d}-of-{total_shards:05d}.pt"
-            )
-            if fsdp_config.sharding_strategy == "FULL_SHARD":
-                torch.save(optimizer.state_dict(), optimizer_save_path)
-            elif fsdp_config.sharding_strategy == "HYBRID_SHARD":
-                if dist.get_rank() < fsdp_config.num_shard:
+                optimizer_save_path = os.path.join(
+                    save_path, f"optimizer.{shard_index:05d}-of-{total_shards:05d}.pt"
+                )
+                if fsdp_config.sharding_strategy == "FULL_SHARD":
                     torch.save(optimizer.state_dict(), optimizer_save_path)
-            else:
-                raise NotImplementedError
+                elif fsdp_config.sharding_strategy == "HYBRID_SHARD":
+                    if dist.get_rank() < fsdp_config.num_shard:
+                        torch.save(optimizer.state_dict(), optimizer_save_path)
+                else:
+                    raise NotImplementedError
 
-        if dist.get_rank() == 0 and scheduler is not None:
-            torch.save(scheduler.state_dict(), os.path.join(save_path, "scheduler.pt"))
+            if dist.get_rank() == 0 and scheduler is not None:
+                torch.save(scheduler.state_dict(), os.path.join(save_path, "scheduler.pt"))
 
-        if dist.get_rank() == 0 and data_status is not None:
-            torch.save(data_status, os.path.join(save_path, "data_status.pt"))
+            if dist.get_rank() == 0 and data_status is not None:
+                torch.save(data_status, os.path.join(save_path, "data_status.pt"))
 
         dist.barrier()
         return
 
     @staticmethod
-    def try_load_ckpt(resume_from, logger, model, ema_model=None, resume_from_ema=False):
+    def try_load_ckpt(resume_from, logger, model, ema_model=None, resume_from_ema=False, lora_only=False):
         if resume_from is not None and os.path.exists(resume_from):
             logger.info(f"Loading checkpoint from {resume_from}.")
-            if resume_from_ema:
-                model_state_dict_path = os.path.join(resume_from, f"ema.safetensors")
+            if lora_only:
+                if resume_from_ema:
+                    model_state_dict_path = os.path.join(resume_from, "ema_lora.safetensors")
+                else:
+                    model_state_dict_path = os.path.join(resume_from, "lora.safetensors")
             else:
-                model_state_dict_path = os.path.join(resume_from, f"model.safetensors")
+                if resume_from_ema:
+                    model_state_dict_path = os.path.join(resume_from, "ema.safetensors")
+                else:
+                    model_state_dict_path = os.path.join(resume_from, "model.safetensors")
             model_state_dict = load_file(model_state_dict_path, device="cpu")
-            # NOTE position embeds are fixed sinusoidal embeddings, so we can just pop it off,
-            # which makes it easier to adapt to different resolutions.
-            model_state_dict.pop('latent_pos_embed.pos_embed')
-            model_state_dict.pop('vit_pos_embed.pos_embed')
+            if not lora_only:
+                # NOTE position embeds are fixed sinusoidal embeddings, so we can just pop it off,
+                # which makes it easier to adapt to different resolutions.
+                model_state_dict.pop('latent_pos_embed.pos_embed')
+                model_state_dict.pop('vit_pos_embed.pos_embed')
             msg = model.load_state_dict(model_state_dict, strict=False)
             logger.info(msg)
             del model_state_dict
 
             if ema_model is not None:
-                ema_state_dict_path = os.path.join(resume_from, f"ema.safetensors")
+                ema_state_dict_path = os.path.join(
+                    resume_from,
+                    "ema_lora.safetensors" if lora_only else "ema.safetensors",
+                )
                 if not os.path.exists(ema_state_dict_path):
                     logger.info(f"replicaing ema model from {model_state_dict_path}.")
                     ema_state_dict_path = model_state_dict_path
                 ema_state_dict = load_file(ema_state_dict_path, device="cpu")
-                # NOTE position embeds are fixed sinusoidal embeddings, so we can just pop it off,
-                # which makes it easier to adapt to different resolutions.
-                ema_state_dict.pop('latent_pos_embed.pos_embed')
-                ema_state_dict.pop('vit_pos_embed.pos_embed')
+                if not lora_only:
+                    # NOTE position embeds are fixed sinusoidal embeddings, so we can just pop it off,
+                    # which makes it easier to adapt to different resolutions.
+                    ema_state_dict.pop('latent_pos_embed.pos_embed')
+                    ema_state_dict.pop('vit_pos_embed.pos_embed')
                 msg = ema_model.load_state_dict(ema_state_dict, strict=False)
                 logger.info(msg)
                 del ema_state_dict
@@ -194,7 +229,7 @@ class FSDPCheckpoint:
         return model, ema_model
 
     @staticmethod
-    def try_load_train_state(resume_from, optimizer, scheduler, fsdp_config):
+    def try_load_train_state(resume_from, optimizer, scheduler, fsdp_config, logger=None):
         if resume_from is not None and os.path.exists(resume_from):
             if fsdp_config.sharding_strategy == "FULL_SHARD":
                 shard_index = dist.get_rank()
@@ -208,34 +243,32 @@ class FSDPCheckpoint:
             optimizer_state_dict_path = os.path.join(
                 resume_from, f"optimizer.{shard_index:05d}-of-{total_shards:05d}.pt"
             )
-            optimizer_state_dict = torch.load(optimizer_state_dict_path, map_location="cpu", weights_only=True)
-            optimizer.load_state_dict(optimizer_state_dict)
-            del optimizer_state_dict
-
             scheduler_state_dict_path = os.path.join(resume_from, "scheduler.pt")
-            scheduler_state_dict = torch.load(scheduler_state_dict_path, weights_only=True, map_location="cpu")
-            scheduler.load_state_dict(scheduler_state_dict)
-            del scheduler_state_dict
-
-            train_steps = int(os.path.basename(os.path.normpath(resume_from))) + 1
-            """
-            data_status = [
-                {
-                    dataset_name: {
-                        worker_id: [parquet_idx, row_group_id, row_idx],
-                    },
-                },
-            ]
-            """
             data_status_path = os.path.join(resume_from, "data_status.pt")
-            if os.path.exists(data_status_path):
-                data_status = torch.load(data_status_path, weights_only=True, map_location="cpu")
-                local_rank = dist.get_rank()
-                if local_rank < len(data_status):
-                    data_status = data_status[local_rank]
+            has_training_state = os.path.exists(optimizer_state_dict_path) and os.path.exists(scheduler_state_dict_path)
+            if has_training_state:
+                optimizer_state_dict = torch.load(optimizer_state_dict_path, map_location="cpu", weights_only=True)
+                optimizer.load_state_dict(optimizer_state_dict)
+                del optimizer_state_dict
+
+                scheduler_state_dict = torch.load(scheduler_state_dict_path, weights_only=True, map_location="cpu")
+                scheduler.load_state_dict(scheduler_state_dict)
+                del scheduler_state_dict
+
+                train_steps = int(os.path.basename(os.path.normpath(resume_from))) + 1
+                if os.path.exists(data_status_path):
+                    data_status = torch.load(data_status_path, weights_only=True, map_location="cpu")
+                    local_rank = dist.get_rank()
+                    if local_rank < len(data_status):
+                        data_status = data_status[local_rank]
+                    else:
+                        data_status = None
                 else:
                     data_status = None
             else:
+                if logger is not None:
+                    logger.info("Training-state files not found; resuming model weights only.")
+                train_steps = 0
                 data_status = None
         else:
             train_steps = 0

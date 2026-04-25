@@ -276,13 +276,29 @@ def batch_generate_texts(
 ) -> List[str]:
     model_dtype = next(inferencer.model.parameters()).dtype
     with torch.autocast(device_type="cuda", enabled=True, dtype=torch.bfloat16):
-        original_vit_images = [inferencer.vae_transform.resize_transform(img) for img in original_images]
-        generated_vit_images = [inferencer.vae_transform.resize_transform(img) for img in generated_images]
+        original_images_resized = [inferencer.vae_transform.resize_transform(img) for img in original_images]
+        generated_images_resized = [inferencer.vae_transform.resize_transform(img) for img in generated_images]
 
         gen_context = init_batch_context(inferencer, len(prompts))
-        gen_context = batch_update_images(inferencer, original_vit_images, gen_context, device, vae=False, vit=True)
+        # Keep stage-2 context aligned with the single-sample image_first path:
+        # original image -> text prompt -> generated image, and both images enter via VAE+ViT.
+        gen_context = batch_update_images(
+            inferencer,
+            original_images_resized,
+            gen_context,
+            device,
+            vae=True,
+            vit=True,
+        )
         gen_context = batch_update_text(inferencer, prompts, gen_context, device)
-        gen_context = batch_update_images(inferencer, generated_vit_images, gen_context, device, vae=False, vit=True)
+        gen_context = batch_update_images(
+            inferencer,
+            generated_images_resized,
+            gen_context,
+            device,
+            vae=True,
+            vit=True,
+        )
 
         generation_input = inferencer.model.prepare_start_tokens(
             gen_context["kv_lens"], gen_context["ropes"], inferencer.new_token_ids

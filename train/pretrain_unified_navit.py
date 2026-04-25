@@ -40,9 +40,12 @@ from train.fsdp_utils import (
     fsdp_ema_setup, fsdp_ema_update,
 )
 
-
 def count_parameters(module: torch.nn.Module) -> int:
     return sum(p.numel() for p in module.parameters())
+
+
+def count_trainable_parameters(module: torch.nn.Module) -> int:
+    return sum(p.numel() for p in module.parameters() if p.requires_grad)
 
 
 def qwen2_flop_coefficients(config) -> tuple[float, float]:
@@ -319,6 +322,10 @@ class TrainingArguments:
         default=2000,
         metadata={"help": "Save a checkpoint every N training steps."}
     )
+    save_training_state: bool = field(
+        default=True,
+        metadata={"help": "Save optimizer/scheduler/data_status alongside model weights."}
+    )
     total_steps: int = field(
         default=500_000,
         metadata={"help": "Total number of optimizer steps to train for."}
@@ -446,6 +453,34 @@ class TrainingArguments:
     use_flex: bool = field(
         default=False,
         metadata={"help": "Enable FLEX (flash-ext friendly) packing algorithm for sequence data."}
+    )
+    lora_enabled: bool = field(
+        default=False,
+        metadata={"help": "Enable native LoRA adapters inside Bagel and freeze base parameters."}
+    )
+    lora_r: int = field(
+        default=8,
+        metadata={"help": "LoRA rank."}
+    )
+    lora_alpha: float = field(
+        default=16.0,
+        metadata={"help": "LoRA alpha scaling."}
+    )
+    lora_dropout: float = field(
+        default=0.0,
+        metadata={"help": "LoRA dropout probability."}
+    )
+    lora_apply_llm: bool = field(
+        default=True,
+        metadata={"help": "Apply LoRA to the language model."}
+    )
+    lora_apply_vit: bool = field(
+        default=True,
+        metadata={"help": "Apply LoRA to the vision model and connector."}
+    )
+    lora_apply_gen: bool = field(
+        default=True,
+        metadata={"help": "Apply LoRA to generation-side modules (vae2llm, llm2vae, timestep MLP, gen experts)." }
     )
 
 
@@ -594,6 +629,19 @@ def main():
         for param in model.vit_model.parameters():
             param.requires_grad = False
 
+    if training_args.lora_enabled:
+        replaced_lora_modules = model.enable_lora(
+            r=training_args.lora_r,
+            alpha=training_args.lora_alpha,
+            dropout=training_args.lora_dropout,
+            apply_to_llm=training_args.lora_apply_llm,
+            apply_to_vit=training_args.lora_apply_vit,
+            apply_to_gen=training_args.lora_apply_gen,
+        )
+        logger.info(f"Enabled LoRA on {len(replaced_lora_modules)} linear modules.")
+        if dist.get_rank() == 0:
+            logger.info(f"LoRA module preview: {replaced_lora_modules[:32]}")
+
     # Setup FSDP and load pretrained model:
     fsdp_config = FSDPConfig(
         sharding_strategy=training_args.sharding_strategy,
@@ -601,18 +649,29 @@ def main():
         cpu_offload=training_args.cpu_offload,
         num_replicate=training_args.num_replicate,
         num_shard=training_args.num_shard,
+        use_orig_params=training_args.lora_enabled,
     )
 
     # EMA setup: optionally disable to save memory
     if training_args.disable_ema:
         ema_model = None
         model, _ = FSDPCheckpoint.try_load_ckpt(
-            resume_from, logger, model, None, resume_from_ema=finetune_from_ema
+            resume_from,
+            logger,
+            model,
+            None,
+            resume_from_ema=finetune_from_ema,
+            lora_only=training_args.lora_enabled,
         )
     else:
         ema_model = deepcopy(model)
         model, ema_model = FSDPCheckpoint.try_load_ckpt(
-            resume_from, logger, model, ema_model, resume_from_ema=finetune_from_ema
+            resume_from,
+            logger,
+            model,
+            ema_model,
+            resume_from_ema=finetune_from_ema,
+            lora_only=training_args.lora_enabled,
         )
         ema_model = fsdp_ema_setup(ema_model, fsdp_config)
 
@@ -629,10 +688,17 @@ def main():
         print(fsdp_model)
         for name, param in model.named_parameters():
             print(name, param.requires_grad)
+        logger.info(
+            f"Trainable parameter count: {count_trainable_parameters(model) / 1e6:.2f}M / "
+            f"{count_parameters(model) / 1e9:.2f}B total"
+        )
 
     # Setup optimizer and scheduler
+    trainable_params = [p for p in fsdp_model.parameters() if p.requires_grad]
+    if len(trainable_params) == 0:
+        raise ValueError("No trainable parameters found. Check LoRA / freeze settings.")
     optimizer = torch.optim.AdamW(
-        fsdp_model.parameters(), 
+        trainable_params, 
         lr=training_args.lr, 
         betas=(training_args.beta1, training_args.beta2), 
         eps=training_args.eps, 
@@ -658,7 +724,7 @@ def main():
         data_status = None
     else:
         optimizer, scheduler, train_step, data_status = FSDPCheckpoint.try_load_train_state(
-            resume_from, optimizer, scheduler, fsdp_config, 
+            resume_from, optimizer, scheduler, fsdp_config, logger=logger,
         )
 
     # Setup packed dataloader
@@ -888,7 +954,9 @@ def main():
                 scheduler=scheduler, 
                 logger=logger,
                 fsdp_config=fsdp_config,
-                data_status=gather_list
+                data_status=gather_list,
+                lora_only=training_args.lora_enabled,
+                save_training_state=training_args.save_training_state,
             )
             if dist.get_rank() == 0:
                 cleanup_old_checkpoints(
@@ -938,7 +1006,9 @@ def main():
             scheduler=scheduler, 
             logger=logger,
             fsdp_config=fsdp_config,
-            data_status=gather_list
+            data_status=gather_list,
+            lora_only=training_args.lora_enabled,
+            save_training_state=training_args.save_training_state,
         )
         if dist.get_rank() == 0:
             cleanup_old_checkpoints(

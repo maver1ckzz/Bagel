@@ -55,11 +55,11 @@ DATASET_INFO = {
 		},
     },
     'unified_edit_v2': {
-        'your_dataset': {
-            'data_dir': '/path/to/data',
+        'multi_inf': {
+            'data_dir': '/hdd/wangty/diffuser_workdir/bagel_example/editing/sag_multi_cot_zyzg_format_new',
             'num_files': 5,
-            'num_total_samples': 5,
-            'parquet_info_path': '/path/to/parquet_info.json',
+            'num_total_samples': 14049,
+            'parquet_info_path': '/hdd/wangty/diffuser_workdir/bagel_example/editing/parquet_info/sag_multi_cot_zyzg_format_new_nas.json',
         },
     }
 }
