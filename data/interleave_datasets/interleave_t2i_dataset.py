@@ -19,6 +19,13 @@ class InterleavedBaseIterableDataset(DistributedIterableDataset):
         return data
 
     def _add_text(self, data, text, need_loss, enable_cfg=True):
+        if isinstance(text, (bytes, bytearray)):
+            text = text.decode("utf-8")
+        elif not isinstance(text, str):
+            raise TypeError(
+                f"text is not valid. Should be a string or utf-8 bytes, got {type(text)} with value: {text!r}"
+            )
+
         text_ids = self.tokenizer.encode(text)
         data['num_tokens'] += len(text_ids)
         data['text_ids_list'].append(text_ids)

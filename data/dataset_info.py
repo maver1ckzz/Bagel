@@ -40,10 +40,10 @@ DATASET_INFO = {
             "parquet_info_path": 'your_data_path/bagel_example/editing/parquet_info/seedxedit_multi_nas.json', # information of the parquet files
 		},
 		'sag_crop': {
-            'data_dir': '/mnt/wangty/dataset/bagel/editing/sag_crop_64',
+            'data_dir': '/hdd/wangty/diffuser_workdir/bagel_example/editing/sag_crop_64',
             'num_files': 5,
             'num_total_samples': 14049,
-            "parquet_info_path": '/mnt/wangty/dataset/bagel/editing/parquet_info/sag_crop_64_nas.json', # information of the parquet files
+            "parquet_info_path": '/hdd/wangty/diffuser_workdir/bagel_example/editing/parquet_info/sag_crop_64_nas.json', # information of the parquet files
 		},
 		
     },
@@ -60,6 +60,12 @@ DATASET_INFO = {
             'num_files': 5,
             'num_total_samples': 14049,
             'parquet_info_path': '/hdd/wangty/diffuser_workdir/bagel_example/editing/parquet_info/sag_multi_cot_zyzg_format_new_nas.json',
+        },
+        'zjxxz_crop_format':{
+            'data_dir': '/hdd/wangty/diffuser_workdir/bagel_example/editing/sag_multi_cot_zjxxz_format_new',
+            'num_files': 5,
+            'num_total_samples': 6244,
+            'parquet_info_path': '/hdd/wangty/diffuser_workdir/bagel_example/editing/parquet_info/sag_multi_cot_zjxxz_format_new_nas.json',
         },
     }
 }

@@ -827,7 +827,7 @@ def main():
             loss_dict["ce"] = ce.detach()
             loss = loss + ce * training_args.ce_weight
         else:
-            assert not training_args.visual_und
+            # assert not training_args.visual_und
             loss_dict["ce"] = torch.tensor(0, device=device)
             total_ce_tokens = torch.tensor(0, device=device)
 
@@ -846,7 +846,10 @@ def main():
         loss = loss / training_args.gradient_accumulation_steps
         loss.backward()
 
-        if (micro_step + 1) % training_args.gradient_accumulation_steps == 0:
+        step_completed = (micro_step + 1) % training_args.gradient_accumulation_steps == 0
+        completed_step = curr_step + 1
+
+        if step_completed:
             total_norm = fsdp_model.clip_grad_norm_(training_args.max_grad_norm)
             optimizer.step()
             scheduler.step()
@@ -855,7 +858,7 @@ def main():
             optimizer.zero_grad()
         
         # Log loss values:
-        if curr_step % training_args.log_every == 0:
+        if step_completed and completed_step % training_args.log_every == 0:
             total_samples = torch.tensor(len(data['sample_lens']), device=device)
             dist.all_reduce(total_samples, op=dist.ReduceOp.SUM)
 
@@ -874,7 +877,7 @@ def main():
             actual_tflops = flops_all_token / elapsed / 1e12
             peak_total_tflops = training_args.peak_device_tflops * dist.get_world_size()
             mfu_value = actual_tflops / peak_total_tflops if peak_total_tflops > 0 else 0.0
-            message = f"(step={curr_step:07d}) "
+            message = f"(step={completed_step:07d}) "
             wandb_log = {}
             for key, value in loss_dict.items():
                 # Reduce loss history over all processes:
@@ -892,14 +895,14 @@ def main():
                 f"Seq Len: {seq_len}, "
                 f"Sample Lens: {sample_lens_local}, "
             )
-            remaining_steps = training_args.total_steps - curr_step
+            remaining_steps = training_args.total_steps - completed_step
             eta_seconds = remaining_steps / max(steps_per_sec, 1e-8)
             eta_hours = eta_seconds / 3600
 
             message += f"ETA: {eta_hours:.2f}h, "
             logger.info(message)
-            if dist.get_rank() == 0:
-                print(message, flush=True)
+            # if dist.get_rank() == 0:
+            #     print(message, flush=True)
 
             wandb_log['lr'] = optimizer.param_groups[0]['lr']
             wandb_log['total_mse_tokens'] = total_mse_tokens.item()
@@ -919,7 +922,7 @@ def main():
             wandb_log['mem_cache'] = mem_cache
 
             if dist.get_rank() == 0:
-                wandb.log(wandb_log, step=curr_step)
+                wandb.log(wandb_log, step=completed_step)
             start_time = time()
             token_window = 0.0
             seqlen_square_window = 0.0
@@ -931,7 +934,7 @@ def main():
                 data_status[item['dataset_name']] = {}
             data_status[item['dataset_name']][item['worker_id']] = item['data_indexes']
 
-        if curr_step > 0 and curr_step % training_args.save_every == 0:
+        if step_completed and completed_step > 0 and completed_step % training_args.save_every == 0:
             # Clear caches and ensure all CUDA operations complete before checkpoint
             torch.cuda.empty_cache()
             torch.cuda.synchronize()
@@ -947,7 +950,7 @@ def main():
 
             FSDPCheckpoint.fsdp_save_ckpt(
                 ckpt_dir=training_args.checkpoint_dir, 
-                train_steps=curr_step, 
+                train_steps=completed_step, 
                 model=fsdp_model, 
                 ema_model=ema_model, 
                 optimizer=optimizer, 

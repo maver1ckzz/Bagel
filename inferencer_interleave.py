@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 from copy import deepcopy
-from typing import List, Dict, Optional, Union, Any, Tuple
+from typing import List, Dict, Optional, Union, Any
 
 from PIL import Image
 import torch
@@ -12,17 +12,11 @@ from modeling.bagel.qwen2_navit import NaiveCache
 
 
 
-VLM_THINK_SYSTEM_PROMPT = '''You should first think about the reasoning process in the mind and then provide the user with the answer. 
-The reasoning process is enclosed within <think> </think> tags, i.e. <think> reasoning process here </think> answer here'''
-
-GEN_THINK_SYSTEM_PROMPT = '''You should first think about the planning process in the mind and then generate the image. 
-The planning process is enclosed within <think> </think> tags, i.e. <think> planning process here </think> image here'''
-
-VLM_INTERLEAVE_SYSTEM_PROMPT = '''
+VLM_THINK_SYSTEM_PROMPT = '''
 Let's think step by step to answer the question. For text-based thinking, enclose the process within <think> </think>, e.g. <think> thinking process here </think>. For visual thinking, enclose the content within <image_start> </image_end>, e.g. <image_start> thinking image here </image_end>. Finally conclude with the final answer wrapped in <answer></answer> tags, i.e.<answer> answer here </answer>.
 '''
 
-GEN_INTERLEAVE_SYSTEM_PROMPT = '''
+GEN_THINK_SYSTEM_PROMPT = '''
 Let's think step by step to answer the question. For text-based thinking, enclose the process within <think> </think>, e.g. <think> thinking process here </think>. For visual thinking, enclose the content within <image_start> </image_end>, e.g. <image_start> thinking image here </image_end>. Finally conclude with the final answer wrapped in <answer></answer> tags, i.e.<answer> answer here </answer>.
 '''
 
@@ -231,8 +225,7 @@ class InterleaveInferencer:
         cfg_renorm_type="global",
         image_shapes=(1024, 1024),
         enable_taylorseer=False,
-        max_rounds: int = 3,
-        use_interleave_format_prompt: bool = False,
+        max_rounds:int=3,
     ) -> List[Union[str, Image.Image]]:
 
         output_list = []
@@ -243,17 +236,9 @@ class InterleaveInferencer:
         with torch.autocast(device_type="cuda", enabled=True, dtype=torch.bfloat16):
             if think:
                 if understanding_output:
-                    system_prompt = (
-                        VLM_INTERLEAVE_SYSTEM_PROMPT
-                        if use_interleave_format_prompt
-                        else VLM_THINK_SYSTEM_PROMPT
-                    )
+                    system_prompt = VLM_THINK_SYSTEM_PROMPT 
                 else:
-                    system_prompt = (
-                        GEN_INTERLEAVE_SYSTEM_PROMPT
-                        if use_interleave_format_prompt
-                        else GEN_THINK_SYSTEM_PROMPT
-                    )
+                    system_prompt = GEN_THINK_SYSTEM_PROMPT
                 gen_context = self.update_context_text(system_prompt, gen_context)
                 cfg_img_context = self.update_context_text(system_prompt, cfg_img_context)
 
@@ -280,217 +265,55 @@ class InterleaveInferencer:
             else:
                 rounds = 0
                 while rounds < max_rounds:
-                    gen_text = self.gen_text(
-                        gen_context,
-                        do_sample=do_sample,
-                        temperature=text_temperature,
-                        max_length=max_think_token_n,
-                    )
+                    gen_text = self.gen_text(gen_context, do_sample=do_sample, temperature=text_temperature, max_length=max_think_token_n)
                     output_list.append(gen_text)
                     gen_context = self.update_context_text(gen_text, gen_context)
-                    # Keep image CFG aligned with newly generated text so the
-                    # subsequent image generation can condition on the think text.
-                    cfg_img_context = self.update_context_text(gen_text, cfg_img_context)
+                    
+                    if "<image_start>" in gen_text:
+                        img = self.gen_image(
+                            image_shapes, 
+                            gen_context, 
+                            cfg_text_precontext=cfg_text_context, 
+                            cfg_img_precontext=cfg_img_context,
+                            cfg_text_scale=cfg_text_scale, 
+                            cfg_img_scale=cfg_img_scale, 
+                            cfg_interval=cfg_interval, 
+                            timestep_shift=timestep_shift, 
+                            num_timesteps=num_timesteps,
+                            cfg_renorm_min=cfg_renorm_min,
+                            cfg_renorm_type=cfg_renorm_type,
+                        )
+                        output_list.append(img)
 
-                    if "<image_start>" not in gen_text:
+                        img_input = self.vae_transform.resize_transform(pil_img2rgb(img))
+                        gen_context = self.update_context_image(img_input, gen_context, vae=not understanding_output)
+                        rounds += 1
+                    else:
                         break
-
-                    img = self.gen_image(
-                        image_shapes, 
-                        gen_context, 
-                        cfg_text_precontext=cfg_text_context, 
-                        cfg_img_precontext=cfg_img_context,
-                        cfg_text_scale=cfg_text_scale, 
-                        cfg_img_scale=cfg_img_scale, 
-                        cfg_interval=cfg_interval, 
-                        timestep_shift=timestep_shift, 
-                        num_timesteps=num_timesteps,
-                        cfg_renorm_min=cfg_renorm_min,
-                        cfg_renorm_type=cfg_renorm_type,
-                        enable_taylorseer=enable_taylorseer,
-                    )
-                    output_list.append(img)
-
-                    img_input = self.vae_transform.resize_transform(pil_img2rgb(img))
-                    gen_context = self.update_context_image(img_input, gen_context, vae=True, vit=True)
-                    # After image injection, text CFG should move forward with the
-                    # latest image context for any later image generation rounds.
-                    cfg_text_context = deepcopy(gen_context)
-                    rounds += 1
 
         return output_list
     
-    def interleaved_generate_image_first(
-        self,
-        input_image: Image.Image,
-        input_text: str,
-        do_sample: bool = False,
-        text_temperature: float = 0.3,
-        max_think_token_n: int = 1000,
-        cfg_text_scale: float = 3.0,
-        cfg_img_scale: float = 1.5,
-        cfg_interval: Tuple[float, float] = (0.4, 1.0),
-        timestep_shift: float = 3.0,
-        num_timesteps: int = 50,
-        cfg_renorm_min: float = 0.0,
-        cfg_renorm_type: str = "global",
-        enable_taylorseer: bool = False,
-    ) -> List[Union[str, Image.Image]]:
-        """
-        固定流程：先基于输入图像和单段文本提示生成图像，然后将生成的图像注入回序列，继续生成文本。
-
-        流程：input_image + input_text -> gen_image -> inject_image -> gen_text
-
-        这里的 input_text 应该已经由调用方拼好完整提示，例如包含第一阶段的
-        reasoning / focus 文本；该函数不再自动补 think prompt。
-
-        Returns:
-            [generated_image, generated_text]
-        """
-        output_list = []
-        gen_context = self.init_gen_context()
-        cfg_text_context = deepcopy(gen_context)
-        cfg_img_context = deepcopy(gen_context)
-
-        with torch.autocast(device_type="cuda", enabled=True, dtype=torch.bfloat16):
-            # Step 1: 把输入图像注入主 context；text CFG 保留这份 image-only 上下文
-            input_image_resized = self.vae_transform.resize_transform(pil_img2rgb(input_image))
-            gen_context = self.update_context_image(input_image_resized, gen_context, vae=True, vit=True)
-            image_shapes = input_image_resized.size[::-1]  # (H, W)
-            cfg_text_context = deepcopy(gen_context)
-
-            # Step 2: 主 context 注入文本；img CFG 只保留 text-only 上下文
-            gen_context = self.update_context_text(input_text, gen_context)
-            cfg_img_context = self.update_context_text(input_text, cfg_img_context)
-
-            # Step 3: 生成图像（基于输入图像 + 文本作为条件）
-            generated_image = self.gen_image(
-                image_shapes,
-                gen_context,
-                cfg_text_precontext=cfg_text_context,
-                cfg_img_precontext=cfg_img_context,
-                cfg_text_scale=cfg_text_scale,
-                cfg_img_scale=cfg_img_scale,
-                cfg_interval=cfg_interval,
-                timestep_shift=timestep_shift,
-                num_timesteps=num_timesteps,
-                cfg_renorm_min=cfg_renorm_min,
-                cfg_renorm_type=cfg_renorm_type,
-                enable_taylorseer=enable_taylorseer,
-            )
-            output_list.append(generated_image)
-
-            # Step 4: 把生成的图像重新注入 context（让模型看到自己生成的图像）
-            gen_context = self.update_context_image(generated_image, gen_context, vae=True, vit=True)
-
-            # Step 5: 继续生成文本（基于原始输入 + 自己生成的图像）
-            generated_text = self.gen_text(
-                gen_context,
-                do_sample=do_sample,
-                temperature=text_temperature,
-                max_length=max_think_token_n,
-            )
-            output_list.append(generated_text)
-
-        return output_list
-
-    def generate_image_from_multiple_images(
-        self,
-        input_images: List[Image.Image],
-        input_text: str,
-        cfg_text_scale: float = 3.0,
-        cfg_img_scale: float = 1.5,
-        cfg_interval: Tuple[float, float] = (0.4, 1.0),
-        timestep_shift: float = 3.0,
-        num_timesteps: int = 50,
-        cfg_renorm_min: float = 0.0,
-        cfg_renorm_type: str = "global",
-        enable_taylorseer: bool = False,
-    ) -> Image.Image:
-        """
-        固定流程：多张输入图 + 一段文本 -> 生成一张图。
-
-        流程：
-            input_images[0], input_images[1], ..., input_text -> gen_image
-
-        语义与 interleave_inference(output=image) 一致，但给多图输入提供了明确入口。
-        """
-        if not input_images:
-            raise ValueError("input_images must contain at least one image.")
-
-        gen_context = self.init_gen_context()
-        cfg_text_context = deepcopy(gen_context)
-        cfg_img_context = deepcopy(gen_context)
-
-        with torch.autocast(device_type="cuda", enabled=True, dtype=torch.bfloat16):
-            image_shapes = None
-            for input_image in input_images:
-                resized = self.vae_transform.resize_transform(pil_img2rgb(input_image))
-                gen_context = self.update_context_image(resized, gen_context, vae=True, vit=True)
-                image_shapes = resized.size[::-1]
-                cfg_text_context = deepcopy(gen_context)
-
-            gen_context = self.update_context_text(input_text, gen_context)
-            cfg_img_context = self.update_context_text(input_text, cfg_img_context)
-
-            generated_image = self.gen_image(
-                image_shapes,
-                gen_context,
-                cfg_text_precontext=cfg_text_context,
-                cfg_img_precontext=cfg_img_context,
-                cfg_text_scale=cfg_text_scale,
-                cfg_img_scale=cfg_img_scale,
-                cfg_interval=cfg_interval,
-                timestep_shift=timestep_shift,
-                num_timesteps=num_timesteps,
-                cfg_renorm_min=cfg_renorm_min,
-                cfg_renorm_type=cfg_renorm_type,
-                enable_taylorseer=enable_taylorseer,
-            )
-
-        return generated_image
-
     def __call__(
         self, 
         image: Optional[Image.Image] = None, 
         text: Optional[str] = None, 
-        image_first: bool = False,
-        input_images: Optional[List[Image.Image]] = None,
+        input_list = None, 
         **kargs
     ) -> Dict[str, Any]:
-        output_dict = {'image': None, 'text': None, 'output_list': None}
+    
+        if input_list is None:
+            output_dict = {'image': None, 'text': None}
 
-        if image is None and text is None and not input_images:
-            print('Please provide at least one input: either an image or text.')
-            return output_dict
+            if image is None and text is None:
+                print('Please provide at least one input: either an image or text.')
+                return output_dict
 
-        if input_images is not None:
-            if text is None:
-                raise ValueError("input_images requires text to be provided.")
-            output_dict['image'] = self.generate_image_from_multiple_images(
-                input_images=input_images,
-                input_text=text,
-                **kargs
-            )
-            output_dict['output_list'] = [output_dict['image']]
-            return output_dict
-
-        if image_first:
-            if image is None or text is None:
-                raise ValueError("image_first=True requires both image and text.")
-            output_list = self.interleaved_generate_image_first(image, text, **kargs)
-        else:
             input_list = []
             if image is not None:
                 input_list.append(image)
             if text is not None:
                 input_list.append(text)
-            output_list = self.interleave_inference(input_list, **kargs)
 
-        for i in output_list:
-            if isinstance(i, Image.Image):
-                output_dict['image'] = i
-            elif isinstance(i, str):
-                output_dict['text'] = i
-        output_dict['output_list'] = output_list
-        return output_dict
+        output_list = self.interleave_inference(input_list, **kargs)
+
+        return output_list

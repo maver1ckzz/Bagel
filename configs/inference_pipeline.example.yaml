@@ -1,0 +1,41 @@
+base_input:
+  - type: image
+    key: original_image
+  - type: text
+    key: prompt
+
+rounds:
+  - name: stage1_crop
+    backend: generate_image
+    # Optional per-round override. If omitted, the script uses --batch-size,
+    # which can also be a schedule like "8,4".
+    # batch_size: 8
+    # Optional image file naming key from the sample/state.
+    # If omitted, the image is saved as <id>.png.
+    output:
+      image: pred_crop
+      image_name_key: prefix
+    params:
+      cfg_text_scale: 4.0
+      cfg_img_scale: 2.0
+      cfg_interval: [0.4, 1.0]
+      timestep_shift: 3.0
+      num_timesteps: 50
+      cfg_renorm_min: 0.0
+      cfg_renorm_type: global
+
+  - name: stage2_diagnosis
+    backend: generate_text
+    # batch_size: 4
+    extra_input:
+      - type: image
+        key: pred_crop
+    output:
+      text: diagnosis
+    params:
+      do_sample: false
+      text_temperature: 0.0
+      max_text_token_n: 256
+      # Optional: truncate generated text once a marker appears.
+      # stop_on_substring: "<image_start>"
+      # include_stop_substring: true

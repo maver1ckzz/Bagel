@@ -1,0 +1,2018 @@
+[
+  {
+    "id": "02240515201024",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240515201024.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240505218050",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240505218050.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240514214099",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240514214099.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240416213015",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240416213015.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240507218029",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240507218029.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506208113",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506208113.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240604208009",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240604208009.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528210020",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528210020.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240526221011",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240526221011.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240509219063",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240509219063.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240605218043",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240605218043.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240505216002",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240505216002.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240521221014",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240521221014.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240530215080",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240530215080.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240514215015",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240514215015.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240609209023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240609209023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515218024",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515218024.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240530215075",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240530215075.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240603214010",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240603214010.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240508213008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240508213008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528215005",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528215005.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240524214074",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240524214074.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240418211022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240418211022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240427213042",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240427213042.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240417213060",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240417213060.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522221114",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522221114.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240513201039",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240513201039.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240523218053",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240523218053.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240424208082",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240424208082.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240531218042",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240531218042.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513218020",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513218020.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240506215048",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240506215048.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240509218053",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240509218053.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240605215023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240605215023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510219007",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510219007.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513215085",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513215085.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522221119",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522221119.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240517211023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240517211023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240422211073",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240422211073.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520213051",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520213051.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515215053",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515215053.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240514221063",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240514221063.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240507210061",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240507210061.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510213020",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510213020.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240613214041",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240613214041.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515218018",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515218018.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240611214014",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240611214014.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240517214045",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240517214045.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240512208022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240512208022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513214084",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513214084.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240430213013",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240430213013.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240531213010",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240531213010.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240517221135",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240517221135.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240529208024",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240529208024.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "06240531216003",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/06240531216003.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240607215020",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240607215020.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529216031",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529216031.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240605218012",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240605218012.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240427216036",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240427216036.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240607221172",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240607221172.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240530213032",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240530213032.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240424210020",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240424210020.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240415208025",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240415208025.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240519221014",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240519221014.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240430214001",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240430214001.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240514201057",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240514201057.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240609214008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240609214008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240425213051",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240425213051.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240604218021",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240604218021.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240604210061",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240604210061.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240601214002",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240601214002.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528213039",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528213039.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513208041",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513208041.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240503211012",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240503211012.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513215118",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513215118.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240418208012",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240418208012.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240516201005",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240516201005.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240422215020",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240422215020.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240426216023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240426216023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240502216005",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240502216005.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506219005",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506219005.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240518208002",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240518208002.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240531218043",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240531218043.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520221040",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520221040.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240530209030",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240530209030.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515221018",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515221018.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240607221092",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240607221092.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240507212099",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240507212099.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240514210007",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240514210007.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240429214072",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240429214072.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240525214003",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240525214003.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240616214022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240616214022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240608221007",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240608221007.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240514214051",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240514214051.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240510214058",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240510214058.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240602214008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240602214008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240605215005",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240605215005.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240606219034",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240606219034.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240521217072",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240521217072.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529221082",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529221082.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240509208004",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240509208004.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240521208053",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240521208053.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240601216044",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240601216044.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522221093",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522221093.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520214120",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520214120.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240515208049",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240515208049.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522215037",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522215037.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240604221015",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240604221015.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240508215044",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240508215044.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240616214006",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240616214006.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240603214001",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240603214001.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240521210044",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240521210044.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240410208115",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240410208115.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240416208035",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240416208035.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240425208083",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240425208083.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240531216068",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240531216068.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240517210068",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240517210068.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528211060",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528211060.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240507215060",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240507215060.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515221008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515221008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515218049",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515218049.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240422210106",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240422210106.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240531210030",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240531210030.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240519214032",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240519214032.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240611214031",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240611214031.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240522211024",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240522211024.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240429213074",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240429213074.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240524215025",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240524215025.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240615213036",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240615213036.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240505218061",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240505218061.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506214077",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506214077.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240504208006",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240504208006.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240524214005",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240524214005.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240417208068",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240417208068.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240506210037",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240506210037.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513214106",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513214106.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240524214006",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240524214006.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240613214044",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240613214044.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240523210022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240523210022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240611215010",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240611215010.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510208086",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510208086.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240416210031",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240416210031.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240511215008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240511215008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240511214021",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240511214021.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510212066",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510212066.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240510215027",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240510215027.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240606215034",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240606215034.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240521213004",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240521213004.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506210021",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506210021.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240515201022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240515201022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510219058",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510219058.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240601216008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240601216008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240530215082",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240530215082.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513213007",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513213007.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240612219010",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240612219010.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240518213003",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240518213003.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240616216017",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240616216017.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240527215039",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240527215039.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240513201051",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240513201051.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529217029",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529217029.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240504215009",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240504215009.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240517210016",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240517210016.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240527213011",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240527213011.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240514217043",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240514217043.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240426208023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240426208023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240511211073",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240511211073.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529217015",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529217015.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240527219027",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240527219027.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529211024",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529211024.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240613219027",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240613219027.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528210013",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528210013.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240612214079",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240612214079.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240511211054",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240511211054.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513214060",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513214060.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240507215096",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240507215096.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240605215039",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240605215039.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240527214102",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240527214102.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520214047",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520214047.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240612215032",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240612215032.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240419210133",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240419210133.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529215021",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529215021.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240524210016",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240524210016.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240519214016",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240519214016.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240511214051",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240511214051.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510215088",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510215088.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240425219039",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240425219039.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240420208015",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240420208015.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240603215044",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240603215044.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240527210008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240527210008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240611215028",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240611215028.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240425214021",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240425214021.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510210023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510210023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506210067",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506210067.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240607214030",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240607214030.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520221013",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520221013.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240424210023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240424210023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240421211029",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240421211029.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240607215032",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240607215032.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240325210017",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240325210017.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510214112",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510214112.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240605210015",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240605210015.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240426214045",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240426214045.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520214115",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520214115.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240612219069",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240612219069.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240509218058",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240509218058.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240527215042",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240527215042.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506215012",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506215012.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240429208057",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240429208057.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528214022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528214022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520218005",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520218005.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240616219003",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240616219003.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240507210042",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240507210042.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240607214042",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240607214042.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240430213025",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240430213025.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240530221008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240530221008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240505215003",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240505215003.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240516218054",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240516218054.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520213042",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520213042.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510212014",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510212014.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510212060",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510212060.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240416210101",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240416210101.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240503216012",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240503216012.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240527213026",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240527213026.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240422212028",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240422212028.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240513201044",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240513201044.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240614216022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240614216022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529214023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529214023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522215040",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522215040.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240612214036",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240612214036.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513213009",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513213009.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240611214118",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240611214118.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240523221062",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240523221062.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240527214033",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240527214033.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240511212061",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240511212061.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240601216019",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240601216019.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240426208040",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240426208040.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529213045",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529213045.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506213014",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506213014.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240616208022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240616208022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515219013",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515219013.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240428214003",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240428214003.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240426212035",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240426212035.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240418208011",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240418208011.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240516210025",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240516210025.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506219032",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506219032.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522211045",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522211045.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240428213078",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240428213078.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240417210123",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240417210123.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240506211031",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240506211031.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240527208067",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240527208067.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240508217025",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240508217025.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515221113",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515221113.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240517221046",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240517221046.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240412218008",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240412218008.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240527210057",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240527210057.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240605210053",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240605210053.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240604215010",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240604215010.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240430214093",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240430214093.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240517218039",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240517218039.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529219009",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529219009.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528214074",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528214074.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240527215016",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240527215016.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240520208006",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240520208006.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515214073",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515214073.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529217044",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529217044.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240527215032",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240527215032.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240514221027",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240514221027.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240514215027",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240514215027.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240508210006",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240508210006.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240612214091",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240612214091.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240508219035",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240508219035.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "06240520210007",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/06240520210007.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240508215019",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240508215019.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240606218015",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240606218015.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240614214099",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240614214099.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240509215065",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240509215065.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522208076",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522208076.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240513215127",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240513215127.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522215047",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522215047.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240423214076",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240423214076.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510219028",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510219028.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240417210032",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240417210032.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506215090",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506215090.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240415211019",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240415211019.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528208006",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528208006.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240612208035",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240612208035.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240527215096",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240527215096.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240417208054",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240417208054.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240513214104",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240513214104.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240602216024",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240602216024.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240606215083",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240606215083.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240527215038",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240527215038.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240607215036",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240607215036.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240607216011",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240607216011.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240531214076",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240531214076.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240430210018",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240430210018.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240520215049",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240520215049.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240530214029",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240530214029.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240529214012",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240529214012.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240604213033",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240604213033.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240516221041",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240516221041.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240509214023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240509214023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240614217017",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240614217017.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240517201023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240517201023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240429214009",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240429214009.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240525213005",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240525213005.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240422208002",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240422208002.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240516221054",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240516221054.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240427208038",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240427208038.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240506216042",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240506216042.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240612215025",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240612215025.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240513212027",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240513212027.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240424214046",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240424214046.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240603213033",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240603213033.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240514214043",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240514214043.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240520214058",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240520214058.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240524214088",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240524214088.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240611215017",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240611215017.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240603218039",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240603218039.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240424208010",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240424208010.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240605214065",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240605214065.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240510215043",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240510215043.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240511217041",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240511217041.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240531217022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240531217022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240527221079",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240527221079.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240511214023",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240511214023.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240605216022",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240605216022.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240511208082",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240511208082.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240522218024",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240522218024.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240528210079",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240528210079.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515216027",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515216027.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240515221014",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240515221014.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240611219011",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240611219011.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "02240527218033",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/02240527218033.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240427216030",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240427216030.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  },
+  {
+    "id": "01240419208002",
+    "image1": "/hdd/wangty/diffuser_workdir/data/reference/zjxxz_box_input/01240410215059.png",
+    "image2": "/mnt/nvme_share/wangty/img/sag_512/01240419208002.png",
+    "prompt": "Use the first image as reference.\nRed boxes indicate disc space narrowing regions and green boxes indicate normal regions.\nIn the second image, find regions similar to the red boxes and mark them with red bounding boxes."
+  }
+]

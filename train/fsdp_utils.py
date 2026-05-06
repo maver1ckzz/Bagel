@@ -189,16 +189,33 @@ class FSDPCheckpoint:
             logger.info(f"Loading checkpoint from {resume_from}.")
             if lora_only:
                 if resume_from_ema:
-                    model_state_dict_path = os.path.join(resume_from, "ema_lora.safetensors")
+                    preferred_path = os.path.join(resume_from, "ema_lora.safetensors")
+                    fallback_path = os.path.join(resume_from, "ema.safetensors")
                 else:
-                    model_state_dict_path = os.path.join(resume_from, "lora.safetensors")
+                    preferred_path = os.path.join(resume_from, "lora.safetensors")
+                    fallback_path = os.path.join(resume_from, "model.safetensors")
+                if os.path.exists(preferred_path):
+                    model_state_dict_path = preferred_path
+                    loading_lora_only = True
+                elif os.path.exists(fallback_path):
+                    logger.info(
+                        f"LoRA checkpoint not found at {preferred_path}; "
+                        f"falling back to base model weights at {fallback_path}."
+                    )
+                    model_state_dict_path = fallback_path
+                    loading_lora_only = False
+                else:
+                    raise FileNotFoundError(
+                        f"Could not find either {preferred_path} or {fallback_path}"
+                    )
             else:
                 if resume_from_ema:
                     model_state_dict_path = os.path.join(resume_from, "ema.safetensors")
                 else:
                     model_state_dict_path = os.path.join(resume_from, "model.safetensors")
+                loading_lora_only = False
             model_state_dict = load_file(model_state_dict_path, device="cpu")
-            if not lora_only:
+            if not loading_lora_only:
                 # NOTE position embeds are fixed sinusoidal embeddings, so we can just pop it off,
                 # which makes it easier to adapt to different resolutions.
                 model_state_dict.pop('latent_pos_embed.pos_embed')
@@ -208,15 +225,31 @@ class FSDPCheckpoint:
             del model_state_dict
 
             if ema_model is not None:
-                ema_state_dict_path = os.path.join(
-                    resume_from,
-                    "ema_lora.safetensors" if lora_only else "ema.safetensors",
-                )
+                if lora_only:
+                    preferred_ema_path = os.path.join(resume_from, "ema_lora.safetensors")
+                    fallback_ema_path = os.path.join(resume_from, "ema.safetensors")
+                    if os.path.exists(preferred_ema_path):
+                        ema_state_dict_path = preferred_ema_path
+                        ema_loading_lora_only = True
+                    elif os.path.exists(fallback_ema_path):
+                        logger.info(
+                            f"EMA LoRA checkpoint not found at {preferred_ema_path}; "
+                            f"falling back to base EMA weights at {fallback_ema_path}."
+                        )
+                        ema_state_dict_path = fallback_ema_path
+                        ema_loading_lora_only = False
+                    else:
+                        logger.info(f"replicaing ema model from {model_state_dict_path}.")
+                        ema_state_dict_path = model_state_dict_path
+                        ema_loading_lora_only = loading_lora_only
+                else:
+                    ema_state_dict_path = os.path.join(resume_from, "ema.safetensors")
+                    ema_loading_lora_only = False
                 if not os.path.exists(ema_state_dict_path):
                     logger.info(f"replicaing ema model from {model_state_dict_path}.")
                     ema_state_dict_path = model_state_dict_path
                 ema_state_dict = load_file(ema_state_dict_path, device="cpu")
-                if not lora_only:
+                if not ema_loading_lora_only:
                     # NOTE position embeds are fixed sinusoidal embeddings, so we can just pop it off,
                     # which makes it easier to adapt to different resolutions.
                     ema_state_dict.pop('latent_pos_embed.pos_embed')
