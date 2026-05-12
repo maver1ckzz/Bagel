@@ -1,0 +1,21 @@
+base_input:
+  - type: image
+    key: original_image
+  - type: text
+    key: prompt
+  - type: image
+    key: crop_img
+
+rounds:
+  - name: stage1_diagnosis
+    backend: generate_text
+    # batch_size: 4
+    output:
+      text: diagnosis
+    params:
+      do_sample: false
+      text_temperature: 0.0
+      max_text_token_n: 256
+      # Optional: truncate generated text once a marker appears.
+      # stop_on_substring: "<image_start>"
+      # include_stop_substring: true

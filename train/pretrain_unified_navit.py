@@ -487,7 +487,8 @@ class TrainingArguments:
 def main():
     assert torch.cuda.is_available()
     dist.init_process_group("nccl")
-    device = dist.get_rank() % torch.cuda.device_count()
+    local_rank = int(os.environ.get("LOCAL_RANK", dist.get_rank() % torch.cuda.device_count()))
+    device = local_rank
     torch.cuda.set_device(device)
     parser = HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
@@ -518,7 +519,7 @@ def main():
             logger.warning("Peak device TFLOPs not set or auto-detected; MFU will report 0.")
     else:
         logger = create_logger(None, dist.get_rank())
-    dist.barrier()
+    dist.barrier(device_ids=[device])
     logger.info(f'Training arguments {training_args}')
     logger.info(f'Model arguments {model_args}')
     logger.info(f'Data arguments {data_args}')
@@ -968,7 +969,7 @@ def main():
                     logger=logger
                 )
 
-            dist.barrier()
+            dist.barrier(device_ids=[device])
             # Clear CUDA cache and force garbage collection after checkpoint to free memory
             gc.collect()
             torch.cuda.empty_cache()
@@ -1020,7 +1021,7 @@ def main():
                 logger=logger
             )
 
-        dist.barrier()
+        dist.barrier(device_ids=[device])
         # Clear CUDA cache and force garbage collection after final checkpoint
         gc.collect()
         torch.cuda.empty_cache()

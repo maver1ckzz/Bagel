@@ -17,7 +17,7 @@ rounds:
       image_name_key: prefix
     params:
       cfg_text_scale: 4.0
-      cfg_img_scale: 2.0
+      cfg_img_scale: 3.0
       cfg_interval: [0.4, 1.0]
       timestep_shift: 3.0
       num_timesteps: 50

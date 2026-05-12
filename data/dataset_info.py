@@ -67,5 +67,11 @@ DATASET_INFO = {
             'num_total_samples': 6244,
             'parquet_info_path': '/hdd/wangty/diffuser_workdir/bagel_example/editing/parquet_info/sag_multi_cot_zjxxz_format_new_nas.json',
         },
+        "zjxxz_crop_v1":{
+            'data_dir': '/hdd/wangty/diffuser_workdir/bagel_example/editing/sag_multi_cot_zjxxz_crop_box',
+            'num_files': 5,
+            'num_total_samples': 6244,
+            'parquet_info_path': '/hdd/wangty/diffuser_workdir/bagel_example/editing/parquet_info/sag_multi_cot_zjxxz_crop_box.json',
+        },
     }
 }
